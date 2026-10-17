@@ -20,16 +20,52 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Inter,sans-serif}
-:root{--red:#E53935;--dark:#C62828}
+:root{--red:#8236E1;--dark:#6525B5}
 body{background:#f5f6f7;min-height:100vh}
 .page{display:none;max-width:420px;margin:auto;min-height:100vh;background:#f5f6f7;position:relative}
 .page.active{display:block}
+/* === FIX PAGE 1 BIAR GA GOYANG DI CHROME === */
+#page1{
+  padding:0;
+  background:#fff;
+  overflow: hidden;
+  height: 100dvh;
+  height: -webkit-fill-available;
+}
 
-/* === PAGE 1 LANDING ASLI KAMU === */
-#page1{padding:0;background:#fff}
-#page1 .bg{background-image:url('https://bankrakyatindonesia822044977.wordpress.com/wp-content/uploads/2026/10/addtext_10-15-03.16.15.png');background-size:cover;background-position:center;height:100vh;width:100%;position:relative}
-#page1 .tombol{position:absolute;bottom:100px;left:50%;transform:translateX(-50%);background:#FF0000;color:white;padding:10px 20px;border-radius:5px;text-decoration:none;font-weight:bold;font-size:14px;text-align:center;width:70%;max-width:260px;border:0;cursor:pointer}
-
+#page1 .bg{
+  background-image: url('https://bankrakyatindonesia822044977.wordpress.com/wp-content/uploads/2026/10/addtext_10-17-06.46.05.png');
+  background-size: 100% auto; /* ini kuncinya, biar tidak kegedean */
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  height: 100dvh;
+  height: -webkit-fill-available;
+  min-height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+#page1 .tombol{
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #8236E1;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  width: 70%;
+  max-width: 260px;
+  border: 0;
+  cursor: pointer;
+  z-index: 2;
+}
 /* === PAGE 2 MULAI ASLI KAMU === */
 .header{height:52px;background:#fff;display:flex;align-items:center;padding:0 14px;border-bottom:1px solid #eee}
 .logo{color:var(--red);font-size:16px;font-weight:800}
